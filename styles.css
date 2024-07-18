@@ -1,0 +1,134 @@
+
+  body {
+    background-color: #ffebef;
+    color: #333;
+    font-family: Arial, sans-serif;
+    background-image: url('./Melo_pic/main_bg.png');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  header,
+  footer {
+    background-color: rgba(255, 105, 180, 0.3); /* Make header transparent */
+    color: #fff;
+    padding: 20px 0;
+    /* border-bottom: 5px solid #ff1493; */
+    backdrop-filter: blur(10px); /* Glass finish */
+  }
+
+  h1 {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  h2 {
+    color: #ff1493;
+    animation: slideInLeft 2s ease-in-out;
+  }
+
+  p {
+    font-size: 1.2em;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  .poem,
+  .carousel,
+  .container {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent glass finish */
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Glass finish */
+    margin-bottom: 20px;
+    border-radius: 50px 0 50px 0;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for 3D effect */
+  }
+
+  .poem:hover,
+  .carousel:hover,
+  .container:hover {
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  }
+
+  .img-fluid {
+    border: 5px solid #ff1493;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+
+  .img-fluid:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow on hover */
+  }
+
+  footer {
+    background-color: rgba(23, 171, 25, 0.3); /* Make footer transparent */
+    color: #fff;
+    padding: 20px 0;
+    /* border-top: 5px solid #ff1493; */
+    backdrop-filter: blur(10px); /* Glass finish */
+  }
+
+  .navbar-dark {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+  }
+
+  .carousel-inner {
+    border: 5px solid #ff1493;
+  }
+
+  .carousel-item {
+    height: 600px;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .fixed-size {
+    height: 500px;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  /* Add carousel slide animations */
+
+  .body {
+    font-family: "Gochi Hand", cursive !important;
+    /* font-weight: 400; */
+    font-style: normal;
+  }
+
+  .poem .row div img {
+    border-radius: 50px 0 50px 0;
+  }
+
+  .gochi-hand-regular {
+    font-family: "Gochi Hand", cursive;
+    font-weight: 600;
+    font-style: normal;
+  }

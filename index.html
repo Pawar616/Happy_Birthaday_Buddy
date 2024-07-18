@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Melo!</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Gochi+Hand&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.9.0/dist/fireworks.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        background-color: #ffebef;
+        color: black;
+        font-family: Arial, sans-serif;
+        background-image: url("./Melo_pic/main_bg.jpg");
+        /* background-size: 100%; */
+        background-size: cover;
+        background-attachment: fixed;
+      }
+
+      header,
+      footer {
+        background-color: rgba(
+          34,
+          139,
+          34,
+          0.378
+        ); /* Make header transparent */
+        color: purple;
+        padding: 20px 0;
+        /* border-bottom: 5px solid #ff1493; */
+        backdrop-filter: blur(10px); /* Glass finish */
+      }
+
+      h1 {
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      h2 {
+        color: white;
+        padding: 5px 0 0 5px;
+        animation: slideInLeft 2s ease-in-out;
+        border-bottom: purple solid 5px;
+      }
+
+      p {
+        font-size: 1.3em;
+        animation: fadeIn 3s ease-in-out;
+      }
+
+      .poem,
+      .carousel,
+      .container {
+        background-color: rgba(34, 139, 34, 0.2); /* Transparent glass finish */
+        /* color: white; */
+        padding: 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(10px); /* Glass finish */
+        margin-bottom: 20px;
+        border-radius: 50px 0 50px 0;
+      }
+      .poem {
+        background-color: rgba(34, 139, 34, 0.6);
+      }
+
+      .img-fluid {
+        border: 5px solid forestgreen;
+      }
+
+      footer {
+        background-color: rgba(23, 171, 25, 0.3); /* Make footer transparent */
+        padding: 20px 0;
+        /* border-top: 5px solid #ff1493; */
+        backdrop-filter: blur(10px); /* Glass finish */
+      }
+      .navbar-dark {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+      }
+      .navbar-dark .navbar-nav .nav-link {
+        color: #fff;
+      }
+
+      .carousel-inner {
+        border: 5px solid forestgreen;
+        border-radius: 50px 0 50px 0;
+      }
+
+      .carousel-item {
+        height: 600px;
+      }
+
+      .carousel-item img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      .fixed-size {
+        height: 500px;
+        width: 100%;
+        object-fit: fill;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      @keyframes slideOutRight {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100%);
+        }
+      }
+
+      .poem.fade-in {
+        animation: fadeIn 1s forwards;
+      }
+
+      .poem.fade-out {
+        animation: fadeOut 1s forwards;
+      }
+
+      .poem.slide-in-left {
+        animation: slideInLeft 1s forwards;
+      }
+
+      .poem.slide-out-right {
+        animation: slideOutRight 1s forwards;
+      }
+
+      /* Add carousel slide animations */
+
+      .body {
+        font-family: "Gochi Hand", cursive !important;
+        /* font-weight: 400; */
+        font-style: normal;
+      }
+      .poem .row div img {
+        border-radius: 50px 0 50px 0;
+      }
+      header img {
+        height: 100px;
+        width: 120px;
+      }
+      .gochi-hand-regular {
+        font-family: "Gochi Hand", cursive;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .shrikhand-regular {
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .alkatra-nav {
+        font-family: "Alkatra", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      @media screen and (max-width: 720px) {
+        body {
+          background-color: #ffebef;
+          color: black;
+          font-family: Arial, sans-serif;
+          background-image: url("./Melo_pic/little_bg.png");
+          /* background-size: 100%; */
+          background-size: cover;
+          background-attachment: fixed;
+        }
+      }
+      body {
+        /* background: black; */
+        /* overflow: hidden; */
+        /* margin: 0; */
+      }
+      canvas {
+        background: rgba(184, 17, 17, 0);
+        background-image: url('./Melo_pic/main_bg.jpg');
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+    <header class="d-flex justify-content-around">
+      <img class="logo1" src="./Melo_pic/logo.png" alt="Logo" />
+      <h1 class="my-4 shrikhand-regular text-center">Happy Birthday, Melo!</h1>
+      <img class="logo2" src="./Melo_pic/logo.png" alt="Logo" />
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand alkatra-nav" href="#"
+        >This is for you MY BESTEST BUDDY</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#carousel">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#poems">Poems</a></li>
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="carousel" class="container mt-5">
+      <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./Melo_pic/bg_c_4.jpg"
+              class="d-block w-100"
+              alt="Image 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Melo_pic/bg_c_1.jpg"
+              class="d-block w-100"
+              alt="Image 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Melo_pic/bg_c_2.jpg"
+              class="d-block w-100"
+              alt="Image 3"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Melo_pic/bg_c_3.jpg"
+              class="d-block w-100"
+              alt="Image 4"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./Melo_pic/bg_c_5.jpg"
+              class="d-block w-100"
+              alt="Image 5"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#imageCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#imageCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="poems" class="container mt-5">
+      <div class="poem mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="./Melo_pic/melo_p3.png"
+              class="img-fluid fixed-size"
+              alt="Poem 1 Image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2 class="bebas-neue-regular">M-Buddies Connection</h2>
+            <p class="gochi-hand-regular">
+              Melo, my friend, always so near,<br />
+              Our bond is special, perfectly clear.<br />
+              Through laughter, tears, and every day,<br />
+              You light my path in every way.<br />
+              <br />
+              We understand with just a glance,<br />
+              In sync, like a perfect dance.<br />
+              M Buddies we are, a bond so true,<br />
+              Forever friends, just me and you.<br />
+              <br />
+              On your birthday, I wish you cheer,<br />
+              Happy moments all year, my dear.<br />
+              Here's to you, with love and grace,<br />
+              Happy birthday, a warm embrace.<br />
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="poem mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="bebas-neue-regular">M Buddies Magic</h2>
+            <p class="gochi-hand-regular">
+              <br />Melo, my friend, always so near, <br />Our bond is special,
+              perfectly clear. <br />Through laughter, tears, and every day,
+              <br />You light my path in every way.
+              <br />
+              <br />We understand with just a glance, <br />In sync, like a
+              perfect dance. <br />M Buddies we are, a bond so true,
+              <br />Forever friends, just me and you.
+              <br />
+              <br />On your birthday, I wish you cheer, <br />Happy moments all
+              year, my dear. <br />Here's to you, with love and grace,
+              <br />Happy birthday, a warm embrace.
+            </p>
+          </div>
+          <div class="col-md-6 d-flex justify-content-start">
+            <img
+              src="./Melo_pic/melo_p1.png"
+              class="img-fluid fixed-size"
+              alt="Poem 2 Image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- New container with image slider and paragraph -->
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6 fade-in">
+            <div id="innerCarousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="./Melo_pic/bgcc_1.png"
+                    class="d-block w-100"
+                    alt="Slide 1"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./Melo_pic/bgcc_2.png"
+                    class="d-block w-100"
+                    alt="Slide 2"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./Melo_pic/bgcc_3.png"
+                    class="d-block w-100"
+                    alt="Slide 3"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./Melo_pic/bgcc_4.png"
+                    class="d-block w-100"
+                    alt="Slide 4"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./Melo_pic/bgcc_5.png"
+                    class="d-block w-100"
+                    alt="Slide 5"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#innerCarousel"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#innerCarousel"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="bebas-neue-regular">
+              Please Dont forgot To Raed this :)
+            </h2>
+            <p class="gochi-hand-regular">
+              <br />
+              Happy birthday, my dear buddy! <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I'm Sooooo happy today and
+              want to make it really sometning special for you. So I try to use
+              my professional skills to show you how much you mean to me. Your
+              birthday is a reminder of how incredibly valuable you are in my
+              life. It feels like we've been friends forever, and every single
+              moment spent with you is unforgettable. You always understand me,
+              even when I do silly things, and that kind of understanding is
+              truly precious.
+              <br />
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When I feel alone, you're
+              always there by my side. You're like an angel, always bringing
+              light into my life. If someone asked me to choose between God and
+              you, I wouldn't hesitate for a moment—I'd choose you. Happy
+              birthday to the most amazing person in the world, my very best
+              friend. Thank you for bringing so much joy into my life. If I
+              started talking about all the wonderful things about you, I could
+              go on forever."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="poem mb-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="bebas-neue-regular">An Angel's Friendship</h2>
+            <p class="gochi-hand-regular">
+              <br />
+              Just eight months since we met, <br />
+              Yet it feels like forever, I bet. <br />
+              You're beautiful, like an angel so true, <br />
+              Sent by God to help me through.
+              <br />
+              <br />
+              In bad times, you stand by my side, <br />
+              In good times, we laugh and glide. <br />
+              People say boy and girl can only be two, <br />
+              Brother-sister or lovers, but we prove it's untrue.
+              <br />
+              <br />
+              This friendship we share, so rare, so fine, <br />
+              Buddy, you're a blessing, a star that shines. <br />
+              Happy birthday, and thank you, dear friend, <br />
+              For making my life better, on you I depend.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="./Melo_pic/melo_p4.png"
+              class="img-fluid fixed-size"
+              alt="Poem 3 Image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="poem mb-5">
+        <div class="row">
+          <div class="col-md-6 d-flex justify-content-start">
+            <img
+              src="./Melo_pic/melo_p2.png"
+              class="img-fluid fixed-size"
+              alt="Poem 4 Image"
+            />
+          </div>
+          <div class="col-md-6">
+            <h2 class="bebas-neue-regular">A Special Bond</h2>
+            <p class="gochi-hand-regular">
+              <br />
+              Every single day we've shared, <br />
+              Moments so special, none compared. <br />
+              Among the many in my virtual sphere, <br />
+              You're the one I hold most dear.
+              <br />
+              <br />
+              In a world so vast, with many around, <br />
+              True friends like you are rarely found. <br />
+              Melo, my best buddy, it's clear to see, <br />
+              You're not just a friend, you're family to me.
+              <br />
+              <br />
+              Through laughs and tears, joy and strife, <br />
+              You bring so much light to my life. <br />
+              Happy birthday, my dear friend, <br />
+              With you, my joy will never end.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="video" class="container mt-5 mb-5">
+      <div class="row">
+        <div class="col">
+          <video width="100%" height="400" autoplay muted loop>
+            <source src="./Melo_pic/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center">
+      <p>&copy; 2024 Happy Birthday Melo. MY Bestest Buddy</p>
+    </footer>
+    <audio src="./Melo_pic/happy-birthday-155461.mp3" loop autoplay></audio>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Ensure the main carousel cycles every 2 seconds
+      $(".carousel").carousel({
+        interval: 2000,
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let poems = document.querySelectorAll(".poem");
+        let lastScrollTop = 0;
+
+        poems.forEach((poem) => {
+          poem.style.opacity = 0;
+        });
+
+        window.addEventListener("scroll", function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+          let scrollDirection = scrollTop > lastScrollTop ? "down" : "up";
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+          poems.forEach((poem) => {
+            let position = poem.getBoundingClientRect().top;
+            let screenPosition = window.innerHeight / 1.3;
+
+            if (position < screenPosition) {
+              if (scrollDirection === "down") {
+                poem.classList.add("fade-in");
+                poem.classList.remove("fade-out");
+              } else {
+                // poem.classList.add("fade-out");
+                // poem.classList.remove("fade-in");
+              }
+            }
+          });
+        });
+
+        // Ensure the main carousel cycles every 2 seconds
+        $(".carousel").carousel({
+          interval: 2000,
+        });
+      });
+    </script>
+    <div
+      id="fireworks-container"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      "
+    ></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("fireworks-container");
+        const fireworks = new Fireworks.default(container, {
+          rocketsPoint: 50, // set the rockets launch point
+          hue: {
+            min: 0,
+            max: 360,
+          },
+          delay: {
+            min: 15,
+            max: 30,
+          },
+          speed: 2,
+          acceleration: 1.05,
+          friction: 0.97,
+          gravity: 1.5,
+          particles: 50,
+          trace: 3,
+          explosion: 5,
+          autoresize: true,
+          brightness: {
+            min: 50,
+            max: 80,
+            decay: {
+              min: 0.015,
+              max: 0.03,
+            },
+          },
+          boundaries: {
+            top: 50,
+            bottom: container.clientHeight,
+            left: 50,
+            right: container.clientWidth,
+          },
+          sound: {
+            enable: true,
+            files: [
+              "https://fireworks.js.org/sounds/explosion0.mp3",
+              "https://fireworks.js.org/sounds/explosion1.mp3",
+              "https://fireworks.js.org/sounds/explosion2.mp3",
+            ],
+            volume: {
+              min: 4,
+              max: 8,
+            },
+          },
+          mouse: {
+            click: false,
+            move: false,
+            max: 1,
+          },
+        });
+        fireworks.start();
+      });
+    </script>
+
+    <script>
+window.addEventListener("resize", resizeCanvas, false);
+window.addEventListener("DOMContentLoaded", onLoad, false);
+
+window.requestAnimationFrame = 
+    window.requestAnimationFrame       || 
+    window.webkitRequestAnimationFrame || 
+    window.mozRequestAnimationFrame    || 
+    window.oRequestAnimationFrame      || 
+    window.msRequestAnimationFrame     || 
+    function (callback) {
+        window.setTimeout(callback, 1000/60);
+    };
+
+var canvas, ctx, w, h, particles = [], probability = 0.04,
+    xPoint, yPoint, backgroundImg;
+
+function onLoad() {
+    canvas = document.getElementById("canvas");
+    ctx = canvas.getContext("2d");
+
+    // Load background image
+    backgroundImg = new Image();
+    backgroundImg.src = './Melo_pic/main_bg.jpg'; // Replace with the path to your image
+    backgroundImg.onload = function() {
+        resizeCanvas();
+        window.requestAnimationFrame(updateWorld);
+    };
+}
+
+function resizeCanvas() {
+    if (!!canvas) {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+    }
+}
+
+function updateWorld() {
+    update();
+    paint();
+    window.requestAnimationFrame(updateWorld);
+}
+
+function update() {
+    if (particles.length < 500 && Math.random() < probability) {
+        createFirework();
+    }
+    var alive = [];
+    for (var i = 0; i < particles.length; i++) {
+        if (particles[i].move()) {
+            alive.push(particles[i]);
+        }
+    }
+    particles = alive;
+}
+
+function paint() {
+    ctx.globalCompositeOperation = 'source-over';
+    
+    // Draw the background image
+    ctx.drawImage(backgroundImg, 0, 0, w, h);
+    
+    ctx.globalCompositeOperation = 'lighter';
+    for (var i = 0; i < particles.length; i++) {
+        particles[i].draw(ctx);
+    }
+}
+
+function createFirework() {
+    xPoint = Math.random() * (w - 200) + 100;
+    yPoint = Math.random() * (h - 200) + 100;
+    var nFire = Math.random() * 50 + 100;
+    var c = "rgb(" + (~~(Math.random() * 200 + 55)) + ","
+         + (~~(Math.random() * 200 + 55)) + "," + (~~(Math.random() * 200 + 55)) + ")";
+    for (var i = 0; i < nFire; i++) {
+        var particle = new Particle();
+        particle.color = c;
+        var vy = Math.sqrt(25 - particle.vx * particle.vx);
+        if (Math.abs(particle.vy) > vy) {
+            particle.vy = particle.vy > 0 ? vy : -vy;
+        }
+        particles.push(particle);
+    }
+}
+
+function Particle() {
+    this.w = this.h = Math.random() * 4 + 1;
+
+    this.x = xPoint - this.w / 2;
+    this.y = yPoint - this.h / 2;
+
+    this.vx = (Math.random() - 0.5) * 10;
+    this.vy = (Math.random() - 0.5) * 10;
+
+    this.alpha = Math.random() * 0.5 + 0.5;
+
+    this.color;
+}
+
+Particle.prototype = {
+    gravity: 0.05,
+    move: function () {
+        this.x += this.vx;
+        this.vy += this.gravity;
+        this.y += this.vy;
+        this.alpha -= 0.01;
+        if (this.x <= -this.w || this.x >= screen.width ||
+            this.y >= screen.height ||
+            this.alpha <= 0) {
+            return false;
+        }
+        return true;
+    },
+    draw: function (c) {
+        c.save();
+        c.beginPath();
+
+        c.translate(this.x + this.w / 2, this.y + this.h / 2);
+        c.arc(0, 0, this.w, 0, Math.PI * 2);
+        c.fillStyle = this.color;
+        c.globalAlpha = this.alpha;
+
+        c.closePath();
+        c.fill();
+        c.restore();
+    }
+}
+
+    </script>
+  </body>
+</html>
